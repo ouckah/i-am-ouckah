@@ -7,9 +7,11 @@ export default function Home() {
   const selected = `text-${ouckah ? "white" : "black"} text-2xl font-bold select-none`
   const unselected = selected + " opacity-50";
 
+  const [primary, secondary] = getColorStyle();
+
   return (
-    <>
-      <main className={`flex h-screen flex-col items-center justify-between bg-${ouckah ? "black" : "white"} p-24`}>
+    <div className="whitespace-nowrap overflow-auto no-scrollbar">
+      <main className={`flex h-screen flex-col items-center justify-between ${ouckah ? (primary) : (secondary)} p-24`}>
         <div className="flex flex-row justify-center items-center w-full h-screen gap-5">
           <h1 className={`text-${ouckah ? "white" : "black"} text-2xl font-bold uppercase select-none`}>I am</h1>
           <div className="flex flex-col justify-center items-start">
@@ -35,7 +37,7 @@ export default function Home() {
       </main>
       {
         ouckah ? (
-          <div>
+          <div className="w-full h-screen bg-red-100">
 
           </div>
         ) : (
@@ -44,6 +46,17 @@ export default function Home() {
           </div>
         )
       }
-    </>
+    </div>
   )
+}
+
+/**
+ * get the tailwind css color for a given status.
+ *
+ * NOTE: doing this to ensure tailwind knows at build time css classes.
+ *
+ * @returns tailwind css for background color
+ */
+function getColorStyle() {
+  return ["bg-black", "bg-white"];
 }
