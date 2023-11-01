@@ -61,8 +61,8 @@ const Ouckah = () => {
               <h1 className="text-white text-xl font-thin uppercase">2023</h1>
               <div className="grid grid-cols-2 justify-center items-center w-full h-full gap-3">
                 {
-                    metrics.map((metric) => (
-                        <Metric title={metric.title} value={metric.value}/>
+                    metrics.map((metric, i) => (
+                        <Metric key={i} title={metric.title} value={metric.value}/>
                     ))
                 }
               </div>

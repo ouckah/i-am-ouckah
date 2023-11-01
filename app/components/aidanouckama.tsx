@@ -172,8 +172,9 @@ const AidanOuckama = () => {
               >
                 
                 {
-                    projects.map((project) => (
+                    projects.map((project, i) => (
                         <ProjectCard
+                            key={i}
                             title={project.title}
                             subtitle={project.subtitle}
                             image={project.image}
