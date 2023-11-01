@@ -18,7 +18,7 @@ export interface Project {
     subtitle: string, 
     image: string,
     date: string, 
-    description: JSX.Element
+    description: string
 }
 
 export interface Subtitle {

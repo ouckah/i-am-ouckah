@@ -11,7 +11,12 @@ const Metric = ({ title, value }: Metric) => {
     return (
         <div className="flex flex-col justify-center items-center w-full h-full">
             <h1 className="text-white font-light tracking-widest uppercase">{title}</h1>
-            <p className="text-white font-bold text-4xl cursor-pointer transition-all duration-300 hover:text-6xl">{value}</p>
+            <p 
+                className="text-white font-bold text-4xl cursor-pointer transition-all duration-300
+                           md:hover:text-6xl"
+            >
+                {value}
+            </p>
         </div>
     )
 }
@@ -74,12 +79,30 @@ const Ouckah = () => {
 const Header = () => {
     return (
         <div className="flex flex-col justify-center items-center w-full h-screen bg-black">
-            <div className="flex flex-row justify-evenly items-center w-full h-1/2 bg-white bg-opacity-40 px-24 py-16">
-                <img src="/selfie.jpg" className="w-1/4 h-[200%] object-cover rounded-3xl shadow-xl"/>
-                <div className="flex flex-col justify-center items-start w-1/2 h-full gap-10"> 
+            <div 
+                className="flex flex-col justify-evenly items-center w-full h-1/2 bg-white bg-opacity-40 px-24 py-16
+                           md:flex-row"
+            >
+                <img 
+                    src="/selfie.jpg" 
+                    className="w-full h-1/2 object-cover rounded-3xl shadow-xl
+                               md:h-[200%] md:w-1/4"
+                />
+                <div 
+                    className="flex flex-col justify-center items-center w-1/2 h-full gap-2
+                               md:items-start md:gap-10"
+                > 
                     <div>
-                        <h1 className="text-6xl text-black font-bold">my name is</h1>
-                        <div className="flex flex-row justify-start items-center w-full">
+                        <h1 
+                            className="hidden text-6xl text-black font-bold
+                                       md:block"
+                        >
+                            my name is
+                        </h1>
+                        <div 
+                            className="flex flex-row justify-center items-center w-full
+                                       md:justify-start"
+                        >
                             <h1 className="text-6xl text-white font-bold animate-bounce animation-delay-0">o</h1>
                             <h1 className="text-6xl text-white font-bold animate-bounce animation-delay-100">u</h1>
                             <h1 className="text-6xl text-white font-bold animate-bounce animation-delay-200">c</h1>
@@ -89,7 +112,10 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <p className="text-3xl text-white font-bold opacity-80">
+                    <p 
+                        className="text-xl text-white font-bold opacity-80
+                                   md:text-3xl"
+                    >
                         and im a <span className="text-yellow-400">computer science content creator</span> <br />
                         who loves sharing my experience as a <br />
                         <span className="text-yellow-400">student</span>,

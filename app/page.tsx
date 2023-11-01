@@ -18,7 +18,12 @@ export default function Home() {
     <div className="whitespace-nowrap overflow-auto no-scrollbar">
       <main className={`flex h-screen flex-col items-center justify-between ${ouckah ? (primary) : (secondary)} p-24`}>
         <div className="flex flex-row justify-center items-center w-full h-screen gap-5">
-          <h1 className={`text-${ouckah ? "white" : "black"} text-5xl font-bold uppercase select-none`}>I am</h1>
+          <h1 
+            className={`text-${ouckah ? "white" : "black"} text-3xl font-bold uppercase select-none
+                        md:text-5xl`}
+          >
+            I am
+          </h1>
           <div className="flex flex-col justify-center items-start">
             <h1 className="text-black text-5xl select-none">{ouckah ? (".") : ("")}</h1>
 

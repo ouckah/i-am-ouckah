@@ -14,7 +14,7 @@ import { Education, Experience, Project } from "../types/cards";
 const education: Education[] = [
     {
         school: "Stevens Institute of Technology",
-        major: "Bachelors in Computer Science, Minor in Mathematics",
+        major: "Computer Science, Minor in Math",
         image: "stevens.jpg",
         subtitles: [
             {
@@ -81,35 +81,21 @@ const projects: Project[] = [
         subtitle: "Google & Square AI Hackathon",
         image: "snapcart.png",
         date: "October 2023",
-        description: 
-            <p>
-                Participated in a hackathon hosted by <br /> 
-                Google and Square looking to integrate <br /> 
-                Google's AutoML and Square{"'"}s payment process API
-            </p>
+        description: "Participated in a hackathon hosted by Google and Square looking to integrate Google's AutoML and Square\'s payment process API"
     },
     {
         title: "ouckah",
         subtitle: "Content Creation",
         image: "tiktok.jpg",
         date: "February 2023 - Present",
-        description:
-            <p>
-                Created educational and entertainment content <br />  
-                revolving around the culture of Computer Science
-            </p>
+        description: "Created educational and entertainment content revolving around the culture of Computer Science"
     },
     {
         title: "EazyWay",
         subtitle: "J.P. Morgan Code for Good",
         image: "codeforgood.jpg",
         date: "September 2023",
-        description:
-            <p>
-                Developed a project for non-profit Wellfare <br />
-                to optimize the onboarding process for those <br />
-                with food stamps and government help.
-            </p>
+        description: "Developed a project for non-profit Wellfare to optimize the onboarding process for those with food stamps and government help"
     }
 ]
 
@@ -174,10 +160,16 @@ const AidanOuckama = () => {
 
             <Divider /> 
 
-            <div className="flex flex-col justify-center items-center w-full h-screen bg-gray-100 p-8 gap-5">
+            <div 
+                className="flex flex-col justify-center items-center w-full min-h-screen bg-gray-100 p-8 gap-5
+                           lg:h-screen"
+            >
               <h1 className="text-black text-4xl font-extralight uppercase">projects</h1>
 
-              <div className="grid grid-rows-1 grid-cols-3 justify-center items-center w-full h-5/6">
+              <div 
+                className="flex flex-col justify-center items-center w-full h-5/6
+                           lg:grid lg:grid-rows-1 lg:grid-cols-3 "
+              >
                 
                 {
                     projects.map((project) => (
@@ -206,12 +198,30 @@ const AidanOuckama = () => {
 const Header = () => {
     return (
         <div className="flex flex-col justify-center items-center w-full h-screen bg-gray-100">
-            <div className="flex flex-row justify-evenly items-center w-full h-1/2 bg-black bg-opacity-40 px-24 py-16">
-                <img src="/pfp.png" className="w-1/5 h-full object-cover rounded-full shadow-xl"/>
-                <div className="flex flex-col justify-center items-start w-1/2 h-full gap-10"> 
+            <div 
+                className="flex flex-col justify-evenly items-center w-full h-1/2 bg-black bg-opacity-40 px-24 py-16
+                           md:flex-row"
+            >
+                <img 
+                    src="/pfp.png" 
+                    className="w-1/2 h-full object-cover rounded-full shadow-xl
+                               md:w-1/5"
+                />
+                <div 
+                    className="flex flex-col justify-center items-center w-1/2 h-full gap-2
+                               md:items-start md:gap-10"
+                > 
                     <div>
-                        <h1 className="text-6xl text-gray-100 font-bold">my name is</h1>
-                        <div className="flex flex-row justify-start items-center w-full">
+                        <h1 
+                            className="hidden text-6xl text-gray-100 font-bold
+                                       md:block"
+                        >
+                            my name is
+                        </h1>
+                        <div 
+                            className="flex flex-row justify-center items-center w-full
+                                       md:justify-start"
+                        >
                             <h1 className="text-6xl text-black font-bold animate-pulse animation-delay-0">a</h1>
                             <h1 className="text-6xl text-black font-bold animate-pulse animation-delay-100">i</h1>
                             <h1 className="text-6xl text-black font-bold animate-pulse animation-delay-200">d</h1>
@@ -220,7 +230,10 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <p className="text-3xl text-black font-bold opacity-80">
+                    <p 
+                        className="text-xl text-black font-bold opacity-80
+                                   md:text-3xl"
+                    >
                         and im a <span className="text-yellow-400">computer science student</span> <br />
                         with a passion for <span className="text-yellow-400"> software engineering</span> <br />
                         and <span className="text-yellow-400"> machine learning</span>
