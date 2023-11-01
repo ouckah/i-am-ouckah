@@ -22,8 +22,9 @@ const EducationCard = ({ school, major, image, subtitles }: Education) => {
                     </h1>
                     <h1 className="hidden md:block">_</h1>
                     {
-                        subtitles.map((subtitle) => (
+                        subtitles.map((subtitle, i) => (
                             <h1 
+                                key={i}
                                 className="hidden text-black font-light text-xs
                                            md:text-xl md:block"
                             >
