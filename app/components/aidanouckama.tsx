@@ -232,7 +232,7 @@ const Header = () => {
                     </div>
 
                     <p 
-                        className="text-xl text-black font-bold opacity-80
+                        className="text-md text-black font-bold opacity-80
                                    md:text-3xl"
                     >
                         and im a <span className="text-yellow-400">computer science student</span> <br />

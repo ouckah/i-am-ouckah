@@ -10,10 +10,13 @@ interface Metric { title: string, value: string }
 const Metric = ({ title, value }: Metric) => {
     return (
         <div className="flex flex-col justify-center items-center w-full h-full">
-            <h1 className="text-white font-light tracking-widest uppercase">{title}</h1>
+            <h1 className="text-white font-light text-xs tracking-widest uppercase
+                           md:text-md">
+                {title}
+            </h1>
             <p 
-                className="text-white font-bold text-4xl cursor-pointer transition-all duration-300
-                           md:hover:text-6xl"
+                className="text-white font-bold text-xl cursor-pointer transition-all duration-300
+                           md:text-4xl md:hover:text-6xl"
             >
                 {value}
             </p>
@@ -113,7 +116,7 @@ const Header = () => {
                     </div>
 
                     <p 
-                        className="text-xl text-white font-bold opacity-80
+                        className="text-md text-white font-bold opacity-80
                                    md:text-3xl"
                     >
                         and im a <span className="text-yellow-400">computer science content creator</span> <br />
