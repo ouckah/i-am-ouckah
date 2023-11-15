@@ -9,7 +9,7 @@ import Divider from "./components/divider";
 export default function Home() {
 
   const [ouckah, setOuckah] = useState(true);
-  const selected = `text-${ouckah ? "white" : "black"} text-5xl font-bold select-none`
+  const selected = `text-${ouckah ? "white" : "black"} text-xl font-bold select-none md:text-5xl`
   const unselected = selected + " opacity-50";
 
   const [primary, secondary] = getColorStyle();
@@ -19,13 +19,13 @@ export default function Home() {
       <main className={`flex h-screen flex-col items-center justify-between ${ouckah ? (primary) : (secondary)} p-24`}>
         <div className="flex flex-row justify-center items-center w-full h-screen gap-5">
           <h1 
-            className={`text-${ouckah ? "white" : "black"} text-3xl font-bold uppercase select-none
+            className={`text-${ouckah ? "white" : "black"} text-xl font-bold uppercase select-none
                         md:text-5xl`}
           >
             I am
           </h1>
           <div className="flex flex-col justify-center items-start">
-            <h1 className="text-black text-5xl select-none">{ouckah ? (".") : ("")}</h1>
+            <h1 className="text-black text-xl select-none md:text-5xl">{ouckah ? (".") : ("")}</h1>
 
             <button 
               className={ouckah ? (selected) : (unselected)}
@@ -41,7 +41,7 @@ export default function Home() {
               aidan ouckama
             </button>
 
-            <h1 className="text-gray-100 text-5xl select-none">{ouckah ? ("") : (".")}</h1>
+            <h1 className="text-gray-100 text-xl select-none md:text-5xl">{ouckah ? ("") : (".")}</h1>
           </div>
         </div>
       </main>
