@@ -38,7 +38,7 @@ const metrics: Metric[] = [
         value:"500,000+"
     },
     {
-        title:"montly unique viewers",
+        title:"monthly unique viewers",
         value:"300,000+"
     },
 ]
